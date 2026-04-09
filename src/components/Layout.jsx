@@ -1,8 +1,11 @@
 import React from 'react'
-
-const Layout = ({ children }) => {
+import { calendarThemes } from '../data/themes'
+const Layout = ({ children, month }) => {
     return (
-        <div className='h-screen w-screen flex items-center justify-center'>
+        <div className='h-screen w-screen flex items-center justify-center'
+            style={{
+                background: calendarThemes[month].colors.wall,
+            }}>
             {children}
         </div>
     )
